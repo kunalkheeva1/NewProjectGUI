@@ -100,11 +100,11 @@ public class BarFrame extends JFrame implements ChangeListener, MouseListener
 	
 	@Override
 	public void mousePressed(MouseEvent e) {
-		System.out.println("The position is" + e.getX());
+		System.out.println( e.getX());
 		System.out.println(e.getY());
 		int location = (e.getY() - 30) / (ICON_HEIGHT / a.size());
 		double value = maxValue * ((double) e.getX() / ICON_WIDTH);
-		System.out.println("location is ->" + location + "   value is->" + value);
+		System.out.println( location +" " + value);
 		dataModel.update(location, value);
 	}
 	
